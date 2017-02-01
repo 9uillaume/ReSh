@@ -12,6 +12,19 @@ def socket_create():
         host = ''
         port = resh_port
         resh_socket = socket.socket()
+        print("         .-\"; ! ;\"-.")
+        print("       .'!  : | :  !`.")
+        print("      /\  ! : ! : !  /\ ")
+        print("     /\ |  ! :|: !  | /\ ")
+        print("    (  \ \ \_____/ / /  )")
+        print("   ( `. \ |  >_   | / .' )")
+        print("   (`. \ \ \_____/ / / .')")
+        print("    \ `.`.\ |!|! |/,'.' / ")
+        print("      `._`.\\\!!!// .'_.'")
+        print("        `.`.\\|//.'.'")
+        print("  guiz   |`._`n'_.'|  ReSh")
+        print("         \"----^----\"")
+
     except socket.error as msg:
         print("Socket creation error: " + str(msg))
 
@@ -31,7 +44,7 @@ def socket_bind():
 
 def socket_accept():
     conn, address = resh_socket.accept()
-    print("Connection has been established | " + "IP " + adress[0] + "| Port " + str(address[1]))
+    print("Connection has been established | " + "IP " + address[0] + "| Port " + str(address[1]))
     send_commands(conn)
     conn.close()
 
